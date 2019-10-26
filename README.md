@@ -24,6 +24,8 @@ public function boot()
 Schema::defaultStringLength(191);
 }
 
+https://stackoverflow.com/questions/23786359/laravel-migration-unique-key-is-too-long-even-if-specified
+
 # php artisan db:seed
 
 # npm run dev
