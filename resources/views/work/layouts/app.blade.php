@@ -40,7 +40,7 @@
             {{-- @include('work.includes.nav') --}}
             <div class="container">
             @include('work.partials.messages')
-                {{-- @yield('content') --}}
+                @yield('content')
             </div><!-- container -->
         </div><!-- #app -->
 
