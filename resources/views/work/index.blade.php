@@ -14,7 +14,7 @@
                                         <div class="user-profile">
                                             <div class="username-dt">
                                                 <div class="usr-pic">
-                                                    <img src="{{ $logged_in_user->picture }}" alt="">
+                                                    <img src="{{ $logged_in_user->picture }}" width="150" height="120" alt="">
                                                 </div>
                                             </div>
                                             <!--username-dt end-->

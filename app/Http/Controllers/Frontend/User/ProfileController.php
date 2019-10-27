@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Repositories\Frontend\Auth\UserRepository;
 use App\Http\Requests\Frontend\User\UpdateProfileRequest;
+use Illuminate\Http\Request;
 
 
 /**
@@ -35,6 +36,15 @@ class ProfileController extends Controller
      * @throws \App\Exceptions\GeneralException
      * @return mixed
      */
+    public function imageUpdate(request $request)
+    {
+        $user = Auth::user();
+        $output = $this->userRepository->imageUpdate(
+            $user->id,
+            $request->file('avatar_location')
+        );
+        return redirect()->route('frontend.user.account')->withFlashSuccess(__('strings.frontend.user.profile_updated'));   
+     }
     public function update(UpdateProfileRequest $request)
     {
 

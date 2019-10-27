@@ -16,7 +16,14 @@
                                 <div class="user_profile">
                                     <div class="user-pro-img">
                                         <img src="{{ $logged_in_user->picture }}" width="170" height="170"  alt="">
-                                        <a href="#" title=""><i class="fa fa-camera"></i></a>
+                                        <div class="form-group hidden" id="avatar_location">
+                                                {{ html()->modelForm($logged_in_user, 'POST', route('frontend.user.profile.imageUpdate'))->class('')->attribute('enctype', 'multipart/form-data')->open() }}
+                                                @method('PATCH')
+                                               
+                                                {{ html()->file('avatar_location')->class('form-control') }}
+                                                <button class="form-control fa fa-camera" type="submit">update</button>
+                                        </form>
+                                            </div><!--form-group-->
                                     </div><!--user-pro-img end-->
                                     <div class="user_pro_status">
                                         <ul class="flw-hr">

@@ -41,6 +41,8 @@ Route::group(['middleware' => ['auth', 'password_expires','checkInfo']], functio
 
         // User Profile Specific
         Route::patch('profile/update', [ProfileController::class, 'update'])->name('profile.update');
+        Route::patch('profile/imageupdate', [ProfileController::class, 'imageUpdate'])->name('profile.imageUpdate');
+
 
     });
 });
