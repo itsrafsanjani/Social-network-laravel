@@ -19,6 +19,16 @@
         <!-- Check if the language is set to RTL, so apply the RTL layouts -->
         <!-- Otherwise apply the normal LTR layouts -->
         {{ style(mix('css/frontend.css')) }}
+        <link rel="stylesheet" type="text/css" href="work/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="work/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="work/css/line-awesome.css">
+        <link rel="stylesheet" type="text/css" href="work/css/line-awesome-font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="work/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="work/css/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" type="text/css" href="work/lib/slick/slick.css">
+        <link rel="stylesheet" type="text/css" href="work/lib/slick/slick-theme.css">
+        <link rel="stylesheet" type="text/css" href="work/css/responsive.css">
+        <link rel="stylesheet" type="text/css" href="css/work.css">
 
         @stack('after-styles')
     </head>
@@ -40,6 +50,7 @@
         {!! script(mix('js/manifest.js')) !!}
         {!! script(mix('js/vendor.js')) !!}
         {!! script(mix('js/frontend.js')) !!}
+        {!! script(mix('js/work.js')) !!}
         @stack('after-scripts')
 
         @include('includes.partials.ga')
