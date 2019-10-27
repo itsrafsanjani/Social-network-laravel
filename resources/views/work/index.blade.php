@@ -2,8 +2,6 @@
 @section('content')
 
 <body>
-
-
     <div class="wrapper">
 
 
