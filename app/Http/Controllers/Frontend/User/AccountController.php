@@ -16,7 +16,9 @@ class AccountController extends Controller
     public function index()
     {
 
-        Log::info(\Auth::user()->info);
-        return view('frontend.user.account');
+        // Log::info(\Auth::user()->info);
+        // return view('frontend.user.account');
+        return view('work.account');
+
     }
 }

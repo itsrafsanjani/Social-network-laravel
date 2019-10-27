@@ -1,5 +1,5 @@
-@extends('work.layouts.app')
-@section('content')
+@include('work.layouts.app')
+
   <header>
     <div class="container">
         <div class="header-data">
@@ -144,8 +144,8 @@
                                       <div class="notification-info">
                                           <h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
                                           <span>2 min ago</span>
-                                      </div><!--notification-info -->
-                                  </div>
+                                        </div>
+                                    </div><!--notification-info -->
                                   <div class="view-all-nots">
                                       <a href="#" title="">View All Notification</a>
                                   </div>
@@ -205,5 +205,5 @@
         </div><!--header-data end-->
     </div>
 </header><!--header end-->
-@endsection
+
 @yield('contents')

@@ -36,10 +36,11 @@
 
         <div id="app">
           
-
+            {{-- @include('includes.partials.logged-in-as') --}}
+            {{-- @include('work.includes.nav') --}}
             <div class="container">
-              
-                @yield('content')
+            @include('work.partials.messages')
+                {{-- @yield('content') --}}
             </div><!-- container -->
         </div><!-- #app -->
 
