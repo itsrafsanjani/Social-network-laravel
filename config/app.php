@@ -200,7 +200,7 @@ return [
         App\Providers\ComposerServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         // hello
-        // App\Providers\TelescopeServiceProvider::class,
+        //  App\Providers\TelescopeServiceProvider::class,
         App\Providers\HelperServiceProvider::class,
         App\Providers\ObserverServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
