@@ -15,7 +15,7 @@
                             <div class="main-left-sidebar">
                                 <div class="user_profile">
                                     <div class="user-pro-img">
-                                        <img src="http://via.placeholder.com/170x170" alt="">
+                                        <img src="{{ $logged_in_user->picture }}" width="170" height="170"  alt="">
                                         <a href="#" title=""><i class="fa fa-camera"></i></a>
                                     </div><!--user-pro-img end-->
                                     <div class="user_pro_status">
@@ -54,7 +54,7 @@
                                         <div class="suggestion-usd">
                                             <img src="http://via.placeholder.com/35x35" alt="">
                                             <div class="sgt-text">
-                                                <h4>Jessica William</h4>
+                                                <h4>{{ $logged_in_user->name }}</h4>
                                                 <span>Graphic Designer</span>
                                             </div>
                                             <span><i class="la la-plus"></i></span>
@@ -62,7 +62,7 @@
                                         <div class="suggestion-usd">
                                             <img src="http://via.placeholder.com/35x35" alt="">
                                             <div class="sgt-text">
-                                                <h4>John Doe</h4>
+                                                <h4>{{ $logged_in_user->name }}</h4>
                                                 <span>PHP Developer</span>
                                             </div>
                                             <span><i class="la la-plus"></i></span>
@@ -94,7 +94,7 @@
                                         <div class="suggestion-usd">
                                             <img src="http://via.placeholder.com/35x35" alt="">
                                             <div class="sgt-text">
-                                                <h4>John Doe</h4>
+                                                <h4>{{ $logged_in_user->name }}</h4>
                                                 <span>PHP Developer</span>
                                             </div>
                                             <span><i class="la la-plus"></i></span>
@@ -109,7 +109,7 @@
                         <div class="col-lg-6">
                             <div class="main-ws-sec">
                                 <div class="user-tab-sec">
-                                    <h3>John Doe</h3>
+                                    <h3>{{ $logged_in_user->name }}</h3>
                                     <div class="star-descp">
                                         <span>Graphic Designer at Self Employed</span>
                                         <ul>
@@ -169,7 +169,7 @@
                                                 <div class="usy-dt">
                                                     <img src="http://via.placeholder.com/50x50" alt="">
                                                     <div class="usy-name">
-                                                        <h3>John Doe</h3>
+                                                        <h3>{{ $logged_in_user->name }}</h3>
                                                         <span><img src="images/clock.png" alt="">3 min ago</span>
                                                     </div>
                                                 </div>
@@ -226,7 +226,7 @@
                                                 <div class="usy-dt">
                                                     <img src="http://via.placeholder.com/50x50" alt="">
                                                     <div class="usy-name">
-                                                        <h3>John Doe</h3>
+                                                        <h3>{{ $logged_in_user->name }}</h3>
                                                         <span><img src="images/clock.png" alt="">3 min ago</span>
                                                     </div>
                                                 </div>
@@ -283,7 +283,7 @@
                                                 <div class="usy-dt">
                                                     <img src="http://via.placeholder.com/50x50" alt="">
                                                     <div class="usy-name">
-                                                        <h3>John Doe</h3>
+                                                        <h3>{{ $logged_in_user->name }}</h3>
                                                         <span><img src="images/clock.png" alt="">3 min ago</span>
                                                     </div>
                                                 </div>
@@ -340,7 +340,7 @@
                                                 <div class="usy-dt">
                                                     <img src="http://via.placeholder.com/50x50" alt="">
                                                     <div class="usy-name">
-                                                        <h3>John Doe</h3>
+                                                        <h3>{{ $logged_in_user->name }}</h3>
                                                         <span><img src="images/clock.png" alt="">3 min ago</span>
                                                     </div>
                                                 </div>
@@ -447,7 +447,7 @@
                                                 <div class="usy-dt">
                                                     <img src="http://via.placeholder.com/50x50" alt="">
                                                     <div class="usy-name">
-                                                        <h3>John Doe</h3>
+                                                        <h3>{{ $logged_in_user->name }}</h3>
                                                         <span><img src="images/clock.png" alt="">3 min ago</span>
                                                     </div>
                                                 </div>
@@ -504,7 +504,7 @@
                                                 <div class="usy-dt">
                                                     <img src="http://via.placeholder.com/50x50" alt="">
                                                     <div class="usy-name">
-                                                        <h3>John Doe</h3>
+                                                        <h3>{{ $logged_in_user->name }}</h3>
                                                         <span><img src="images/clock.png" alt="">3 min ago</span>
                                                     </div>
                                                 </div>
@@ -561,7 +561,7 @@
                                                 <div class="usy-dt">
                                                     <img src="http://via.placeholder.com/50x50" alt="">
                                                     <div class="usy-name">
-                                                        <h3>John Doe</h3>
+                                                        <h3>{{ $logged_in_user->name }}</h3>
                                                         <span><img src="images/clock.png" alt="">3 min ago</span>
                                                     </div>
                                                 </div>
@@ -618,7 +618,7 @@
                                                 <div class="usy-dt">
                                                     <img src="http://via.placeholder.com/50x50" alt="">
                                                     <div class="usy-name">
-                                                        <h3>John Doe</h3>
+                                                        <h3>{{ $logged_in_user->name }}</h3>
                                                         <span><img src="images/clock.png" alt="">3 min ago</span>
                                                     </div>
                                                 </div>
@@ -682,7 +682,7 @@
                                                 <div class="usy-dt">
                                                     <img src="http://via.placeholder.com/50x50" alt="">
                                                     <div class="usy-name">
-                                                        <h3>John Doe</h3>
+                                                        <h3>{{ $logged_in_user->name }}</h3>
                                                         <span><img src="images/clock.png" alt="">3 min ago</span>
                                                     </div>
                                                 </div>
@@ -742,7 +742,7 @@
                                                 <div class="usy-dt">
                                                     <img src="http://via.placeholder.com/50x50" alt="">
                                                     <div class="usy-name">
-                                                        <h3>John Doe</h3>
+                                                        <h3>{{ $logged_in_user->name }}</h3>
                                                         <span><img src="images/clock.png" alt="">3 min ago</span>
                                                     </div>
                                                 </div>
@@ -802,7 +802,7 @@
                                                 <div class="usy-dt">
                                                     <img src="http://via.placeholder.com/50x50" alt="">
                                                     <div class="usy-name">
-                                                        <h3>John Doe</h3>
+                                                        <h3>{{ $logged_in_user->picture }}</h3>
                                                         <span><img src="images/clock.png" alt="">3 min ago</span>
                                                     </div>
                                                 </div>
@@ -862,7 +862,7 @@
                                                 <div class="usy-dt">
                                                     <img src="http://via.placeholder.com/50x50" alt="">
                                                     <div class="usy-name">
-                                                        <h3>John Doe</h3>
+                                                        <h3>{{ $logged_in_user->name }}</h3>
                                                         <span><img src="images/clock.png" alt="">3 min ago</span>
                                                     </div>
                                                 </div>

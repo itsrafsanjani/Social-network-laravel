@@ -36,6 +36,8 @@ Route::group(['middleware' => ['auth', 'password_expires','checkInfo']], functio
 
         // User Account Specific
         Route::get('account', [AccountController::class, 'index'])->name('account');
+        Route::get('settings', [AccountController::class, 'settings'])->name('settings');
+
 
         // User Profile Specific
         Route::patch('profile/update', [ProfileController::class, 'update'])->name('profile.update');

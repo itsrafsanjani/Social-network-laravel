@@ -4,8 +4,7 @@
     <div class="container">
         <div class="header-data">
             <div class="logo">
-                <a href="{{ route('frontend.index') }}" title="{{ app_name() }}"><img src="images/logo.png"
-                        alt="">
+                <a href="{{ route('frontend.index') }}" title="{{ app_name() }}"><img src="images/logo.png" alt="">
                     {{-- <a href="{{ route('frontend.index') }}" class="navbar-brand">{{ app_name() }}</a> --}}
                 </a>
             </div>
@@ -75,8 +74,7 @@
                         </a>
                         <div class="notification-box msg">
                             <div class="nt-title">
-                                <h4>Setting</h4>
-                                <a href="#" title="">Clear all</a>
+                               
                             </div>
                             <div class="nott-list">
                                 <div class="notfication-details">
@@ -128,8 +126,10 @@
                         </a>
                         <div class="notification-box">
                             <div class="nt-title">
-                                <h4>Setting</h4>
-                                <a href="#" title="">Clear all</a>
+                                <h4>
+                                    <a href="<a href=" {{ route('frontend.user.settings') }}"
+                                        title="{{ app_name() }}">Setting</a>
+                                </h4>
                             </div>
                             <div class="nott-list">
                                 <div class="notfication-details">
@@ -227,15 +227,17 @@
                         </form>
                     </div>
                     <!--search_form end-->
-                    <h3>Setting</h3>
+                    <h3><a href="{{ route('frontend.user.settings') }}" title="{{ app_name() }}">Setting</a></h3>
                     <ul class="us-links">
-                        <li> 
-                                @can('view backend')
-                                    <a href="{{ route('admin.dashboard') }}" >@lang('navs.frontend.user.administration')</a>
-                                @endcan
-                        </li>		
-                            <li><a href="{{ route('frontend.user.account') }}" {{ active_class(Route::is('frontend.user.account')) }}>@lang('navs.frontend.user.account')</a></li>
-                        
+                        <li>
+                            @can('view backend')
+                            <a href="{{ route('admin.dashboard') }}">@lang('navs.frontend.user.administration')</a>
+                            @endcan
+                        </li>
+                        <li><a href="{{ route('frontend.user.account') }}"
+                                {{ active_class(Route::is('frontend.user.account')) }}>@lang('navs.frontend.user.account')</a>
+                        </li>
+
                         <li><a href="#" title="">Privacy</a></li>
                         <li><a href="#" title="">Faqs</a></li>
                         <li><a href="#" title="">Terms & Conditions</a></li>

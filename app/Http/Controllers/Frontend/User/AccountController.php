@@ -21,4 +21,8 @@ class AccountController extends Controller
         return view('work.account');
 
     }
+    public function settings(){
+
+        return view('work.settings');
+    }
 }
