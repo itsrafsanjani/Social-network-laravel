@@ -1,5 +1,6 @@
-@extends('work.layouts.header')
+@extends('work.layouts.app')
 @section('contents')
+
 <section class="cover-sec">
         <img src="http://via.placeholder.com/1600x400" alt="">
         <a href="#" title=""><i class="fa fa-camera"></i> Change Image</a>

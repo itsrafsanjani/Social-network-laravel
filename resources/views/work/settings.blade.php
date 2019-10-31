@@ -1,5 +1,6 @@
-@extends('work.layouts.header')
+@extends('work.layouts.app')
 @section('contents')
+
 <section class="profile-account-setting">
     <div class="container">
         <div class="account-tabs-setting">

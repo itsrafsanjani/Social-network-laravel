@@ -1,10 +1,10 @@
-@include('work.layouts.app')
+
 
 <header>
     <div class="container">
         <div class="header-data">
             <div class="logo">
-                <a href="{{ route('frontend.index') }}" title="{{ app_name() }}"><img src="images/logo.png" alt="">
+                <a href="{{ route('frontend.index') }}" title="{{ app_name() }}"><img src="{{asset('images/logo.png')}}" alt="">
                     {{-- <a href="{{ route('frontend.index') }}" class="navbar-brand">{{ app_name() }}</a> --}}
                 </a>
             </div>
@@ -31,7 +31,7 @@
                     @endif
                     <li>
                         <a href="{{ route('frontend.index') }}" title="">
-                            <span><img src="images/icon1.png" alt=""></span>
+                            <span><img src="{{asset('images/icon1.png')}}" alt=""></span>
                             Home
                         </a>
                     </li>
@@ -253,4 +253,4 @@
     </div>
 </header>
 <!--header end-->
-@yield('contents')
+

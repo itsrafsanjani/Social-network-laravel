@@ -19,28 +19,28 @@
         <!-- Check if the language is set to RTL, so apply the RTL layouts -->
         <!-- Otherwise apply the normal LTR layouts -->
         {{ style(mix('css/frontend.css')) }}
-        <link rel="stylesheet" type="text/css" href="work/css/animate.css">
-        <link rel="stylesheet" type="text/css" href="work/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="work/css/line-awesome.css">
-        <link rel="stylesheet" type="text/css" href="work/css/line-awesome-font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="work/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="work/css/jquery.mCustomScrollbar.min.css">
-        <link rel="stylesheet" type="text/css" href="work/lib/slick/slick.css">
-        <link rel="stylesheet" type="text/css" href="work/lib/slick/slick-theme.css">
-        <link rel="stylesheet" type="text/css" href="work/css/responsive.css">
-        <link rel="stylesheet" type="text/css" href="css/work.css">
+        <link rel="stylesheet" type="text/css" href="{{asset('work/css/animate.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('work/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('work/css/line-awesome.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('work/css/line-awesome-font-awesome.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('work/css/font-awesome.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('work/css/jquery.mCustomScrollbar.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('work/lib/slick/slick.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('work/lib/slick/slick-theme.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('work/css/responsive.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/work.css')}}">
 
         @stack('after-styles')
     </head>
+    @include('work.layouts.header')
     <body>
 
         <div id="app">
           
             {{-- @include('includes.partials.logged-in-as') --}}
-            {{-- @include('work.includes.nav') --}}
             <div class="container">
             @include('work.partials.messages')
-                @yield('content')
+                @yield('contents')
             </div><!-- container -->
         </div><!-- #app -->
 

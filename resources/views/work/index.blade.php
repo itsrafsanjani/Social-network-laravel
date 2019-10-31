@@ -1,4 +1,4 @@
-@extends('work.layouts.header')
+@extends('work.layouts.app')
 @section('contents')
 
 <body>

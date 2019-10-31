@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend\User;
 
 use App\Http\Controllers\Controller;
 use Log;
+use App\Models\Auth\User;
 
 /**
  * Class AccountController.
