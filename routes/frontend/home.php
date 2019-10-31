@@ -37,6 +37,7 @@ Route::group(['middleware' => ['auth', 'password_expires','checkInfo']], functio
         // User Account Specific
         Route::get('account', [AccountController::class, 'index'])->name('account');
         Route::get('settings', [AccountController::class, 'settings'])->name('settings');
+        Route::get('user/{id}', 'AccountController@userAccount')->name('user');
 
 
         // User Profile Specific

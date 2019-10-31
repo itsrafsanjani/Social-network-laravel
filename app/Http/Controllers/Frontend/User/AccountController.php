@@ -25,4 +25,7 @@ class AccountController extends Controller
 
         return view('work.settings');
     }
+    public function userAccount($id){
+        return view('work.profile', ['user' => User::findOrFail($id)]);
+    }
 }
