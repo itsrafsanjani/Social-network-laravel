@@ -32,13 +32,17 @@
 
         @stack('after-styles')
     </head>
-    @include('work.layouts.header')
+         @if (Auth::check())
+        //show logged in navbar
+        @include('work.layouts.header')
+@endif
     <body>
 
         <div id="app">
           
             {{-- @include('includes.partials.logged-in-as') --}}
             <div class="container">
+                
             @include('work.partials.messages')
                 @yield('contents')
             </div><!-- container -->

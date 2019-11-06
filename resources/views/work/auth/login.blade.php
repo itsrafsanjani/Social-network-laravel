@@ -1,5 +1,5 @@
 @extends('work.layouts.app')
-@section('content')
+@section('contents')
 <body class="sign-in">
 	
 
