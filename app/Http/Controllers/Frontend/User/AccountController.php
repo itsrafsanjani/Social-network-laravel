@@ -34,16 +34,24 @@ class AccountController extends Controller
         }
         $user=User::findOrFail($id);
         $FriendShip=auth()->user()->getFriendship($user);
-        $groups=$FriendShip->groups;
+        $groups=[];
         $close=false;
-$family=false;
-$school=false;
+        $family=false;
+        $school=false;
+        try {
+            //code...
+            $groups=$FriendShip->groups;
+           
         foreach ($groups as $group) {
             # code...
              $group->group_id == 1 ? $close=true:null;
              $group->group_id == 2 ? $family=true:null;
              $group->group_id == 3 ? $school=true:null;
         }
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+        
         $user->isFriendWith(auth()->user());
         return view('work.profile', ['close'=>$close,'family'=>$family,'school'=>$school,'user' => $user ,
         'isFriend'  => $user->isFriendWith(auth()->user())
@@ -54,6 +62,9 @@ $school=false;
         $userReceiver=User::findOrFail($id);
         if($userSender->isFriendWith($userReceiver)){
             $userSender->unfriend($userReceiver);}
+            elseif($userReceiver->isFriendWith($userSender)){
+                $userReceiver->unfriend($userSender);
+            }
         elseif($userSender->hasSentFriendRequestTo($userReceiver)){
             $userReceiver->denyFriendRequest($userSender);
         }elseif($userReceiver->hasSentFriendRequestTo($userSender)){
@@ -67,9 +78,17 @@ $school=false;
     }
     public function acceptFriend($id)
     {
-        
-        auth()->user()->acceptFriendRequest(User::findOrFail($id));
-        return redirect()->back()->withFlashSuccess('friend accepted');
+        $userSender = Auth::user();
+        $userReceiver=User::findOrFail($id);
+        if($userSender->isFriendWith($userReceiver)){
+            $userSender->unfriend($userReceiver);}
+            elseif($userReceiver->isFriendWith($userSender)){
+                $userReceiver->unfriend($userSender);
+            }else{
+            auth()->user()->acceptFriendRequest(User::findOrFail($id));
+            return redirect()->back()->withFlashSuccess('friend accepted');
+        }
+        return redirect()->back();
 
     }
     public function addTofamily($id)
