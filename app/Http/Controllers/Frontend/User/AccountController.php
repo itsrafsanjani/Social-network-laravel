@@ -38,6 +38,15 @@ class AccountController extends Controller
         $close=false;
         $family=false;
         $school=false;
+        $friends=[];
+        try {
+            //code...
+            $friends=$user->getFriends();
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+       
+        
         try {
             //code...
             $groups=$FriendShip->groups;
@@ -53,9 +62,12 @@ class AccountController extends Controller
         }
         
         $user->isFriendWith(auth()->user());
-        return view('work.profile', ['close'=>$close,'family'=>$family,'school'=>$school,'user' => $user ,
+        return view('work.profile', ['close'=>$close,'family'=>$family,'school'=>$school,
+        'user' => $user ,
         'isFriend'  => $user->isFriendWith(auth()->user())
-        ,'isSent'=>auth()->user()->hasSentFriendRequestTo($user),'hasSend'=>$user->hasSentFriendRequestTo(auth()->user())]);
+        ,'isSent'=>auth()->user()->hasSentFriendRequestTo($user),
+        'hasSend'=>$user->hasSentFriendRequestTo(auth()->user()),
+        'friends'=>$friends]);
     }
     public function userAddFriend($id){
         $userSender = Auth::user();
