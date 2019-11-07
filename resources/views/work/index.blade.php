@@ -41,13 +41,10 @@
                                         </p>
                                         <ul class="user-fw-status">
                                             <li>
-                                                <h4>Following</h4>
-                                                <span>34</span>
+                                                <h4>Friends</h4>
+                                                <span>{{$logged_in_user->getFriendsCount()}}</span>
                                             </li>
-                                            <li>
-                                                <h4>Followers</h4>
-                                                <span>155</span>
-                                            </li>
+                                            
                                             <li>
                                                 <a href="#" title="">View Profile</a>
                                             </li>

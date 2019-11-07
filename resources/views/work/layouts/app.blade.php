@@ -33,7 +33,7 @@
         @stack('after-styles')
     </head>
          @if (Auth::check())
-        //show logged in navbar
+        {{-- //show logged in navbar --}}
         @include('work.layouts.header')
 @endif
     <body>

@@ -37,7 +37,7 @@
                     </li>
                     {{-- <li>
                         <a href="companies.html" title="">
-                            <span><img src="images/icon2.png" alt=""></span>
+                            <span><img src="{{asset('images/icon2.png')}}" alt=""></span>
                             Companies
                         </a>
                         <ul>
@@ -47,29 +47,46 @@
                     </li> --}}
                     <li>
                         <a href="projects.html" title="">
-                            <span><img src="images/icon3.png" alt=""></span>
+                            <span><img src="{{asset('images/icon3.png')}}" alt=""></span>
                             Projects
                         </a>
                     </li>
                     <li>
                         <a href="profiles.html" title="">
-                            <span><img src="images/icon4.png" alt=""></span>
+                            <span><img src="{{asset('images/icon4.png')}}" alt=""></span>
                             Requests
                         </a>
                         <ul>
-                            <li><a href="user-profile.html" title="">User Profile</a></li>
-                            <li><a href="my-profile-feed.html" title="">my-profile-feed</a></li>
+                             <div class="requests-list">
+                                 @foreach ($requests as $sender)
+                                 <div class="request-details">
+                                     <div class="noty-user-img">
+                                         <img src="{{$sender->picture}}" height="30px" width="30px" alt="">
+                                        </div>
+                                        <div class="request-info">
+                                            <h3>{{$sender->name}}</h3>
+                                        </div>
+                                        
+                                        <div class="accept-feat">
+                                            <a href="{{route('frontend.user.accept', ['id' => $sender->id])}}">Accept</a>
+                                            <a href="{{route('frontend.user.addUser', ['id' => $sender->id])}}" class="close-req"><i
+                                                class="la la-close"></i></a>
+                                            </div>
+                                            <!--accept-feat end-->
+                                    </div>
+                                   @endforeach
+                            </div>
                         </ul>
                     </li>
                     <li>
                         <a href="jobs.html" title="">
-                            <span><img src="images/icon5.png" alt=""></span>
+                            <span><img src="{{asset('images/icon5.png')}}" alt=""></span>
                             Jobs
                         </a>
                     </li>
                     <li>
                         <a href="#" title="" class="not-box-open">
-                            <span><img src="images/icon6.png" alt=""></span>
+                            <span><img src="{{asset('images/icon6.png')}}" alt=""></span>
                             Messages
                         </a>
                         <div class="notification-box msg">
@@ -79,7 +96,7 @@
                             <div class="nott-list">
                                 <div class="notfication-details">
                                     <div class="noty-user-img">
-                                        <img src="images/resources/ny-img1.png" alt="">
+                                        <img src="{{asset('images/resources/ny-img1.png')}}" alt="">
                                     </div>
                                     <div class="notification-info">
                                         <h3><a href="messages.html" title="">Jassica William</a> </h3>
@@ -90,7 +107,7 @@
                                 </div>
                                 <div class="notfication-details">
                                     <div class="noty-user-img">
-                                        <img src="images/resources/ny-img2.png" alt="">
+                                        <img src="{{asset('images/resources/ny-img2.png')}}" alt="">
                                     </div>
                                     <div class="notification-info">
                                         <h3><a href="messages.html" title="">Jassica William</a></h3>
@@ -101,7 +118,7 @@
                                 </div>
                                 <div class="notfication-details">
                                     <div class="noty-user-img">
-                                        <img src="images/resources/ny-img3.png" alt="">
+                                        <img src="{{asset('images/resources/ny-img3.png')}}" alt="">
                                     </div>
                                     <div class="notification-info">
                                         <h3><a href="messages.html" title="">Jassica William</a></h3>
@@ -121,7 +138,7 @@
                     </li>
                     <li>
                         <a href="#" title="" class="not-box-open">
-                            <span><img src="images/icon7.png" alt=""></span>
+                            <span><img src="{{asset('images/icon7.png')}}" alt=""></span>
                             Notification
                         </a>
                         <div class="notification-box">
@@ -134,7 +151,7 @@
                             <div class="nott-list">
                                 <div class="notfication-details">
                                     <div class="noty-user-img">
-                                        <img src="images/resources/ny-img1.png" alt="">
+                                        <img src="{{asset('images/resources/ny-img1.png')}}" alt="">
                                     </div>
                                     <div class="notification-info">
                                         <h3><a href="#" title="">Jassica William</a> Comment on your project.
@@ -145,7 +162,7 @@
                                 </div>
                                 <div class="notfication-details">
                                     <div class="noty-user-img">
-                                        <img src="images/resources/ny-img2.png" alt="">
+                                        <img src="{{asset('images/resources/ny-img2.png')}}" alt="">
                                     </div>
                                     <div class="notification-info">
                                         <h3><a href="#" title="">Jassica William</a> Comment on your project.
@@ -156,7 +173,7 @@
                                 </div>
                                 <div class="notfication-details">
                                     <div class="noty-user-img">
-                                        <img src="images/resources/ny-img3.png" alt="">
+                                        <img src="{{asset('images/resources/ny-img3.png')}}" alt="">
                                     </div>
                                     <div class="notification-info">
                                         <h3><a href="#" title="">Jassica William</a> Comment on your project.
@@ -167,7 +184,7 @@
                                 </div>
                                 <div class="notfication-details">
                                     <div class="noty-user-img">
-                                        <img src="images/resources/ny-img2.png" alt="">
+                                        <img src="{{asset('images/resources/ny-img2.png')}}" alt="">
                                     </div>
                                     <div class="notification-info">
                                         <h3><a href="#" title="">Jassica William</a> Comment on your project.
@@ -193,8 +210,8 @@
             <!--menu-btn end-->
             <div class="user-account">
                 <div class="user-info">
-                    <img src="http://via.placeholder.com/30x30" alt="">
-                    <a href="#" title="">John</a>
+                    <img src="{{ $logged_in_user->picture }}" height="30px" width="30px" alt="">
+                    <a href="#" title="">{{ $logged_in_user->first_name }}</a>
                     <i class="la la-sort-down"></i>
                 </div>
                 <div class="user-account-settingss">

@@ -1,16 +1,9 @@
-@extends('frontend.layouts.app')
-
-@section('content')
+@extends('work.layouts.app')
+@section('contents')
 
     {{ html()->modelForm($logged_in_user, 'POST', route('frontend.info.update'))->class('form-horizontal')->attribute('enctype', 'multipart/form-data')->open() }}
     @method('PATCH')
-    <div class="row">
-        <div class="col">
-            <div class="form-group mb-0 clearfix">
-                {{ form_submit(__('labels.general.buttons.next')) }}
-            </div><!--form-group-->
-        </div><!--col-->
-    </div><!--row-->
+ 
     <div class="row">
         <div class="col">
             <div class="form-group">
