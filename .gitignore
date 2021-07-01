@@ -28,12 +28,10 @@ output.txt
 coverage.xml
 /coverage
 .phpunit.result.cache
-<<<<<<< HEAD
 public/vendor/telescope/mix-manifest.json
 public/vendor/telescope/favicon.ico
 public/vendor/telescope/app-dark.css
 public/js/frontend.js
-.env.example
 .gitignore
 composer.lock
 app/Providers/TelescopeServiceProvider.php
@@ -46,9 +44,5 @@ public/js/backend.js
 public/js/work.js
 public/vendor/telescope/app.css
 /composer.lock
-config/app.php
-=======
 app/Providers/AppServiceProvider.php
-
->>>>>>> 0f7dbd9e50bea81eac6d70bf382c799654e31a3e
 public/vendor/telescope/app.js
